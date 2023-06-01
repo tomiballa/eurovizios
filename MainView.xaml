@@ -1,0 +1,35 @@
+<Window x:Class="Eurovizio.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        mc:Ignorable="d"
+        Title="MainView" Height="800" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="gridSingers" Grid.ColumnSpan="5" SelectionChanged="gridSingersSelectionChanged"></DataGrid>
+        <DockPanel Grid.Row="1" Grid.ColumnSpan="5">
+            <TextBox Width="250" x:Name="textBoxSinger"></TextBox>
+            <ListBox x:Name="listBoxSinger"></ListBox>
+        </DockPanel>
+        <DockPanel Grid.Row="2" Grid.ColumnSpan="5">
+            <Label VerticalAlignment="Center" x:Name="lblContestDate">Verseny dátuma: </Label>
+        </DockPanel>
+        <Button Grid.Row="3" Click="QueryFour">4. feladat</Button>
+        <Button Grid.Row="3" Grid.Column="1" Click="QueryFive">5. feladat</Button>
+        <Button Grid.Row="3" Grid.Column="2" Click="QuerySix">6. feladat</Button>
+        <Button Grid.Row="3" Grid.Column="3" Click="QuerySeven">7. feladat</Button>
+    </Grid>
+</Window>
